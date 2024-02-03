@@ -6,13 +6,17 @@
     <title>Rus2</title>
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="./scripts/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="container header__container">
         <nav class="nav header__nav">
           <div class="nav__left">
-            <a href="#" class="nav__item nav__item_bold">Направление</a>
+            <a href="#" class="nav__item nav__item_bold nav__item_active"
+              >Направление</a
+            >
             <a href="#" class="nav__item">Портфолио</a>
             <a href="#" class="nav__item">Контакты</a>
           </div>
@@ -27,7 +31,7 @@
     <main class="main">
       <section class="section metter__section">
         <div class="container metter__container">
-          <h1 class="metter__title">Почему мы не используем coreldrow</h1>
+          <h1 class="metter__title">Почему мы не используем coreldraw</h1>
         </div>
       </section>
 
@@ -47,58 +51,84 @@
                     Adobe - это компания, представляющая широкий спектр
                     продуктов, среди которых вы, вероятно, знакомы с основными:
                   </p>
-                  <ul class="solution__list">
-                    <li class="solution__item">
-                      <img
-                        class="solution__item_img"
-                        src="./images/adobe-illustrator.png"
-                        alt="Adobe Illustrator"
-                      />
-                    </li>
-                    <li class="solution__item">
-                      <img
-                        class="solution__item_img"
-                        src="./images/adobe-pdf.png"
-                        alt="Adobe PDF"
-                      />
-                    </li>
-                    <li class="solution__item">
-                      <img
-                        class="solution__item_img"
-                        src="./images/adobe-premiere.png"
-                        alt="Adobe Premiere"
-                      />
-                    </li>
-                    <li class="solution__item">
-                      <img
-                        class="solution__item_img"
-                        src="./images/adobe-photoshop.png"
-                        alt="Adobe Photoshop"
-                      />
-                    </li>
-                    <li class="solution__item">
-                      <img
-                        class="solution__item_img"
-                        src="./images/adobe-indesign.png"
-                        alt="Adobe Indesign"
-                      />
-                    </li>
-                    <li class="solution__item">
-                      <img
-                        class="solution__item_img"
-                        src="./images/adobe-afterEffects.png"
-                        alt="Adobe After Effects"
-                      />
-                    </li>
-                  </ul>
-                  <span class="solution__details"
-                    >а также более 90 других продуктов</span
-                  >
+                  <div class="solution__products">
+                    <ul class="solution__list">
+                      <li class="solution__item">
+                        <figure>
+                          <picture class="solution__picture">
+                            <img
+                              class="solution__item_img"
+                              src="./images/adobe-illustrator.png"
+                              alt="Adobe Illustrator"
+                            />
+                          </picture>
+                        </figure>
+                      </li>
+                      <li class="solution__item">
+                        <figure>
+                          <picture class="solution__picture">
+                            <img
+                              class="solution__item_img"
+                              src="./images/adobe-pdf.png"
+                              alt="Adobe PDF"
+                            />
+                          </picture>
+                        </figure>
+                      </li>
+                      <li class="solution__item">
+                        <figure>
+                          <picture class="solution__picture">
+                            <img
+                              class="solution__item_img"
+                              src="./images/adobe-premiere.png"
+                              alt="Adobe Premiere"
+                            />
+                          </picture>
+                        </figure>
+                      </li>
+                      <li class="solution__item">
+                        <figure>
+                          <picture class="solution__picture">
+                            <img
+                              class="solution__item_img"
+                              src="./images/adobe-photoshop.png"
+                              alt="Adobe Photoshop"
+                            />
+                          </picture>
+                        </figure>
+                      </li>
+                      <li class="solution__item">
+                        <figure>
+                          <picture class="solution__picture">
+                            <img
+                              class="solution__item_img"
+                              src="./images/adobe-indesign.png"
+                              alt="Adobe Indesign"
+                            />
+                          </picture>
+                        </figure>
+                      </li>
+                      <li class="solution__item">
+                        <figure>
+                          <picture class="solution__picture">
+                            <img
+                              class="solution__item_img"
+                              src="./images/adobe-afterEffects.png"
+                              alt="Adobe After Effects"
+                            />
+                          </picture>
+                        </figure>
+                      </li>
+                    </ul>
+                    <span class="solution__details"
+                      >а также более 90 других продуктов</span
+                    >
+                  </div>
                 </div>
               </div>
               <div class="solution__block_bottom">
                 <p class="solution__descr descr__margin">
-                  Более тысячи специалистов по всему миру активно учавствуют в
+                  Более тысячи специалистов по всему миру активно участвуют в
                   разработке и обеспечивают высокое качество продуктов и их
                   разнообразные возможности.
                 </p>
@@ -110,14 +140,14 @@
 
             <div class="solution__two">
               <p class="solution__descr">
-                Поддежка CorelDrow практически отсутствует в Европе и США,
+                Поддержка CorelDrow практически отсутствует в Европе и США,
                 поскольку более 98% типографий в этих регионах не используют
                 данный формат.
               </p>
             </div>
 
             <div class="solution__block solution__column">
-              <div class="solution__block_top solution__three">
+              <div class="solution__three">
                 <p class="solution__descr">
                   Главный недостаток CorelDraw заключается в преобразовании
                   документа во внутренний формат bitmap. Это особенно заметно
@@ -125,18 +155,25 @@
                   различные артефакты, такие как неожиданные грани, изменение
                   цветов или полная инверсия изображения.
                 </p>
-              
               </div>
               <div class="solution__block_bottom">
                 <div class="solution__images_top">
-                  <img
-                    src="./images/solution-3-error-1.png"
-                    alt="Внутрення ошибка фильтра"
-                  />
-                  <img
-                    src="./images/solution-3-error-2.png"
-                    alt="Указанный формат данных недоступен"
-                  />
+                  <figure>
+                    <picture>
+                      <img
+                        src="./images/solution-3-error-1.png"
+                        alt="Внутрення ошибка фильтра"
+                      />
+                    </picture>
+                  </figure>
+                  <figure class="solution__images_figure">
+                    <picture>
+                      <img
+                        src="./images/solution-3-error-2.png"
+                        alt="Указанный формат данных недоступен"
+                      />
+                    </picture>
+                  </figure>
                 </div>
                 <p class="solution__descr">
                   В отличие от этого, Illustrator лишен подобных неожиданностей
@@ -153,36 +190,55 @@
                     src="./images/pdf-round.png"
                     alt="PDF"
                   />
+
                   <img
                     class="solution__img_ai"
                     src="./images/Ai.png"
                     alt="Ai"
                   />
+
                   <img
                     class="solution__img_corel"
                     src="./images/CorelDraw.png"
                     alt="CorelDraw"
                   />
-                  <img
-                    class="solution__img"
-                    src="./images/buclet-1.png"
-                    alt="Буклет 1"
-                  />
-                  <img
-                    class="solution__img"
-                    src="./images/buclet-2.png"
-                    alt="Буклет 2"
-                  />
-                  <img
-                    class="solution__img"
-                    src="./images/buclet-3.png"
-                    alt="Буклет 3"
-                  />
-                  <img
-                    class="solution__img"
-                    src="./images/buclet-4.png"
-                    alt="Буклет 4"
-                  />
+
+                  <figure class="solution__figure_bottom">
+                    <picture>
+                      <img
+                        class="solution__img"
+                        src="./images/buclet-1.png"
+                        alt="Буклет 1"
+                      />
+                    </picture>
+                  </figure>
+                  <figure class="solution__figure_bottom">
+                    <picture
+                      ><img
+                        class="solution__img"
+                        src="./images/buclet-2.png"
+                        alt="Буклет 2"
+                      />
+                    </picture>
+                  </figure>
+                  <figure class="solution__figure_bottom">
+                    <picture>
+                      <img
+                        class="solution__img"
+                        src="./images/buclet-3.png"
+                        alt="Буклет 3"
+                      />
+                    </picture>
+                  </figure>
+                  <figure class="solution__figure_bottom">
+                    <picture>
+                      <img
+                        class="solution__img"
+                        src="./images/buclet-4.png"
+                        alt="Буклет 4"
+                      />
+                    </picture>
+                  </figure>
                 </div>
               </div>
             </div>
@@ -205,26 +261,308 @@
                 неоправданно.
               </p>
             </div>
-
-            <p class="solution__descr">
-              Используя среду Adobe, мы вкладываемся в инновации, качество и
-              признание в мировом масштабе. Присоединяйтесь к нам в этом
-              увлекательном путешествии в мир творчества, где каждый проект
-              становится настоящим произведением искусства.
-            </p>
           </article>
-          <aside>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+          <aside class="solution__sidebar sidebar">
+            <ul class="sidebar__list">
+              <li class="sidebar__item sidebar__coreldraw">
+                <button class="sidebar__button">
+                  <span class="sidebar__button_toptext"
+                    >Почему мы не используем</span
+                  >
+                  <span class="sidebar__button_bottomtext">CorelDrow</span>
+                  <img
+                    class="sidebar__button_img"
+                    src="./images/sidebar-button-img.svg"
+                    alt="arrow"
+                  />
+                </button>
+              </li>
+              <li class="sidebar__item sidebar__team">
+                <button class="sidebar__button">
+                  <span class="sidebar__button_toptext"
+                    >В команде creat работают</span
+                  >
+                  <span class="sidebar__button_bottomtext">только лучшие</span>
+                  <img
+                    class="sidebar__button_img"
+                    src="./images/sidebar-button-img.svg"
+                    alt="arrow"
+                  />
+                </button>
+              </li>
+              <li class="sidebar__item sidebar__ideas">
+                <button class="sidebar__button">
+                  <span class="sidebar__button_toptext"
+                    >Откуда мы черпаем идеи</span
+                  >
+                  <span class="sidebar__button_bottomtext">для дизайна</span>
+                  <img
+                    class="sidebar__button_img"
+                    src="./images/sidebar-button-img.svg"
+                    alt="arrow"
+                  />
+                </button>
+              </li>
+              <li class="sidebar__item sidebar__team">
+                <button class="sidebar__button">
+                  <span class="sidebar__button_toptext"
+                    >В команде creat работают</span
+                  >
+                  <span class="sidebar__button_bottomtext">только лучшие</span>
+                  <img
+                    class="sidebar__button_img"
+                    src="./images/sidebar-button-img.svg"
+                    alt="arrow"
+                  />
+                </button>
+              </li>
             </ul>
           </aside>
         </div>
       </section>
 
-      <div>scroll</div>
+      <section class="motivation">
+        <div class="container">
+          <p class="solution__descr">
+            Используя среду Adobe, мы вкладываемся в инновации, качество и
+            признание в мировом масштабе. Присоединяйтесь к&nbsp;нам в этом
+            увлекательном путешествии в мир творчества, где каждый проект
+            становится настоящим произведением искусства.
+          </p>
+        </div>
+      </section>
+
+      <section class="slider">
+        <div class="swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-top-1.png"
+                    alt="wood"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-top-2.png"
+                    alt="coffee"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-top-3.png"
+                    alt="magna"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-top-4.png"
+                    alt="banya"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-top-5.png"
+                    alt="lewski.ru"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-top-1.png"
+                    alt="wood"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-top-2.png"
+                    alt="coffee"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-top-3.png"
+                    alt="magna"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-top-4.png"
+                    alt="banya"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-top-5.png"
+                    alt="lewski.ru"
+                  />
+                </picture>
+              </figure>
+            </li>
+          </ul>
+        </div>
+
+        <div dir="rtl" class="swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-bottom-1.png"
+                    alt="iphone gift"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-bottom-2.png"
+                    alt="bread"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-bottom-3.png"
+                    alt="cooking book"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-bottom-4.png"
+                    alt="business card"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-bottom-5.png"
+                    alt="magazine"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-bottom-1.png"
+                    alt="iphone gift"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-bottom-2.png"
+                    alt="bread"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-bottom-3.png"
+                    alt="cooking book"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-bottom-4.png"
+                    alt="business card"
+                  />
+                </picture>
+              </figure>
+            </li>
+            <li class="swiper-slide">
+              <figure class="slider__figure">
+                <picture class="slider__picture">
+                  <img
+                    class="slider__img"
+                    src="./images/slider-bottom-5.png"
+                    alt="magazine"
+                  />
+                </picture>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
   </body>
 </html>
